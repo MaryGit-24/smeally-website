@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tell us about your business | SME Ally</title>
+<meta name="description" content="Tell us what's taking your time and book a free 20-minute call with SME Ally.">
+<meta name="theme-color" content="#0B0B0C">
+<link rel="canonical" href="https://smeally.com/start">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SME Ally">
+<meta property="og:title" content="Tell us about your business | SME Ally">
+<meta property="og:description" content="Tell us what's taking your time and book a free 20-minute call with SME Ally.">
+<meta property="og:url" content="https://smeally.com/start">
+<meta property="og:image" content="https://smeally.com/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="preload" href="/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="/" aria-label="SME Ally home">
+<img src="/images/mark.svg" width="40" height="40" alt="">
+<span class="brand-name">SME <span>Ally</span></span>
+</a>
+<nav class="nav" aria-label="Main">
+<a href="/what-we-do">What we do</a>
+<a href="/about">About</a>
+
+</nav>
+</div>
+</header>
+<main id="main">
+<div class="narrow" style="max-width:680px;padding-top:56px;padding-bottom:88px">
+
+<div id="step-form">
+<h1 class="h1" style="font-size:clamp(36px,6vw,54px)">Tell us about your business</h1>
+<p class="muted" style="margin-top:12px">It takes two minutes. We'll read it before we talk, so the call is about you, not about filling forms.</p>
+
+<form id="lead-form" class="form" novalidate>
+<input type="checkbox" name="botcheck" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+<div class="field"><label for="f-name">Your name</label>
+<input class="input" id="f-name" name="name" autocomplete="name" required></div>
+
+<div class="field"><label for="f-biz">Business name</label>
+<input class="input" id="f-biz" name="business" autocomplete="organization" required></div>
+
+<div class="field"><label for="f-kind">What kind of business is it?</label>
+<input class="input" id="f-kind" name="kind" placeholder="For example: perfume shop, catfish farm, salon, logistics"></div>
+
+<div class="field"><label for="f-where">Where are you based?</label>
+<input class="input" id="f-where" name="location" placeholder="City and country"></div>
+
+<div class="field"><label for="f-wa">WhatsApp number</label>
+<p class="hint" id="f-wa-hint">Include your country code, for example +234 or +254.</p>
+<input class="input" id="f-wa" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="+234" aria-describedby="f-wa-hint" required></div>
+
+<div class="field"><label for="f-pain">What's taking up most of your time right now?</label>
+<textarea class="input" id="f-pain" name="time_taker" rows="4" placeholder="Say it the way you'd say it to a friend."></textarea></div>
+
+<fieldset>
+<legend class="legend">Would you like a free 20-minute call to talk it through?</legend>
+<div class="choice-row">
+<label class="choice"><input type="radio" name="call" value="Yes"><span>Yes, let's talk</span></label>
+<label class="choice"><input type="radio" name="call" value="Not yet"><span>Not yet</span></label>
+</div>
+</fieldset>
+
+<p class="call-note" id="call-note" hidden>Great. After you press Send, a calendar opens right here so you can pick your time. Calls are on <strong>Saturdays and Sundays, 10am to 4pm, Lagos time</strong>.</p>
+
+<p class="error-text" id="form-error" role="alert" hidden></p>
+
+<div>
+<button class="btn" type="submit" id="send-btn">Send</button>
+<p class="muted" style="font-size:17px;margin-top:14px">We only use this to reply to you. We never share it. <a href="/privacy">Privacy notice</a></p>
+</div>
+</form>
+</div>
+
+<div id="step-book" hidden>
+<h1 class="h1" style="font-size:clamp(34px,5.5vw,50px)">Thank you. Now pick your time.</h1>
+<p style="margin-top:12px">We have your details. Choose a Saturday or Sunday slot below. You'll get a confirmation straight away.</p>
+<div id="cal-box"></div>
+<p class="muted" style="margin-top:18px">Calendar not loading? <a id="cal-wa" href="https://wa.me/2348155720669">Message us on WhatsApp</a> and we'll book you in.</p>
+</div>
+
+<div id="step-done" class="done" hidden>
+<img src="/images/mark.svg" width="96" height="96" alt="" style="margin:0 auto">
+<h1 class="h1" style="font-size:clamp(34px,5vw,48px);margin-top:20px">Thank you.</h1>
+<p id="done-text" style="margin:12px auto 0;max-width:480px">We'll reach out on WhatsApp within a day.</p>
+<p style="margin-top:28px"><a href="/"><strong>Back to home</strong></a></p>
+</div>
+
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<span class="brand-name">SME <span>Ally</span></span>
+<div class="footer-links">
+<a href="mailto:ime@smeally.com">ime@smeally.com</a>
+<a href="https://wa.me/2348155720669">WhatsApp +234 815 572 0669</a>
+<a href="/privacy">Privacy</a>
+<span>Lagos, Nigeria · Serving SMEs across Africa</span>
+</div>
+</div>
+</footer>
+<script src="/js/config.js"></script>
+<script src="/js/start.js"></script>
+<script src="/js/motion.js" defer></script>
+</body>
+</html>
