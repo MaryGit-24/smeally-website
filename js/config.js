@@ -19,7 +19,7 @@ window.SME_ALLY = {
   //    Only the part after "cal.com/".
   //    Example: if your link is https://cal.com/smeally/free-call
   //    then type "smeally/free-call"
-  CAL_LINK: "https://cal.com/smeally/free-call",
+  CAL_LINK: "smeally/free-call",
 
   // WhatsApp number used as a backup if anything fails.
   // Digits only, with country code, no + sign.
