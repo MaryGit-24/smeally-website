@@ -9,6 +9,8 @@
   var sendBtn = document.getElementById('send-btn');
   var callNote = document.getElementById('call-note');
   var keyReady = cfg.FORM_KEY && cfg.FORM_KEY.indexOf('PASTE') !== 0;
+  // accept either "smeally/free-call" or the full https://cal.com/... link
+  if (cfg.CAL_LINK) cfg.CAL_LINK = String(cfg.CAL_LINK).replace(/^https?:\/\/(www\.)?cal\.com\//, '').replace(/\/$/, '');
   var calReady = cfg.CAL_LINK && cfg.CAL_LINK.indexOf('PASTE') !== 0;
 
   function val(name) {

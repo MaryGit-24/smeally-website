@@ -12,7 +12,7 @@
   /* ---------- 2. Soft rise on scroll ---------- */
   var selectors = [
     'main h2', '.grid > *', '.steps > *', '.rule-item', '.service',
-    '.faq-item', '.cta-box', '.cta-band .cta-inner', '.faith', '.big-quote', '.credit'
+    '.faq-item', '.svc', 'details.faq', '.timeline li', '.step-card', '.pills', '.cta-box', '.cta-band .cta-inner', '.faith', '.big-quote', '.credit'
   ];
   var items = document.querySelectorAll(selectors.join(','));
   var seen = new IntersectionObserver(function (entries) {

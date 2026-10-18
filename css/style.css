@@ -237,3 +237,68 @@ fieldset { border: 0; padding: 0; margin: 0; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .btn:hover, .card:hover, .service:hover, .choice span:hover { transform: none !important; }
 }
+
+/* ================= Version 2: fewer words, more to look at ================= */
+.icon { width: 28px; height: 28px; stroke: var(--gold); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.icon-lg { width: 40px; height: 40px; }
+.icon-box { width: 56px; height: 56px; border-radius: 16px; background: rgba(233, 196, 106, 0.1); border: 1px solid rgba(233, 196, 106, 0.25); display: flex; align-items: center; justify-content: center; }
+.card-gold .icon-box { background: rgba(11, 11, 12, 0.12); border-color: rgba(11, 11, 12, 0.2); }
+.card-gold .icon { stroke: var(--bg); }
+.section-sub { font-size: 19px; color: var(--muted); margin-top: 10px; max-width: 560px; }
+
+/* Pain tiles */
+.pain { display: flex; flex-direction: column; gap: 14px; }
+.pain-set { font-size: 18px; }
+.pain-punch { font-family: var(--head); font-weight: 800; font-size: 26px; line-height: 1.15; color: var(--gold); letter-spacing: -0.01em; }
+
+/* Service tiles */
+.tile { display: flex; flex-direction: column; gap: 14px; }
+.tile .card-title { margin-top: 4px; }
+
+/* Steps row */
+.step-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 32px; counter-reset: s; }
+.step-card { background: var(--bg); border: 1px solid var(--line); border-radius: 22px; padding: 24px; display: flex; gap: 16px; align-items: flex-start; }
+.step-card .step-num { font-size: 44px; }
+.step-card p { font-weight: 700; font-size: 19px; line-height: 1.35; }
+.step-card span { display: block; font-weight: 400; color: var(--muted); font-size: 17px; margin-top: 4px; }
+
+/* Trust pills */
+.pills { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.pill { display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); font-weight: 700; font-size: 17px; }
+.band .pill { background: var(--bg); }
+.pill .icon { width: 22px; height: 22px; }
+
+/* What we do: tabs */
+.svc { background: var(--panel); border: 1px solid var(--line); border-radius: 28px; padding: 28px 24px; display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+.svc-main { flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 12px; }
+.svc-name { font-family: var(--head); font-weight: 800; font-size: 40px; line-height: 1; color: var(--gold); }
+.svc-tag { font-weight: 700; font-size: 21px; }
+.svc-side { flex: 1.4 1 340px; min-width: 0; }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.tab { font: inherit; font-size: 16px; font-weight: 700; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--field-line); background: transparent; color: var(--text); cursor: pointer; transition: background-color .18s ease, color .18s ease, border-color .18s ease; }
+.tab[aria-selected="true"] { background: var(--gold); border-color: var(--gold); color: var(--bg); }
+.tab-panel { margin-top: 14px; background: var(--bg); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; font-size: 18px; min-height: 92px; }
+.tab-panel[hidden] { display: none; }
+.svc .pidgin { color: var(--gold); font-weight: 700; }
+
+/* FAQ with tap to open */
+details.faq { border-top: 1px solid var(--line); }
+details.faq:last-of-type { border-bottom: 1px solid var(--line); }
+details.faq summary { list-style: none; cursor: pointer; padding: 20px 40px 20px 0; position: relative; font-weight: 700; font-size: 20px; color: var(--gold); }
+details.faq summary::-webkit-details-marker { display: none; }
+details.faq summary::after { content: '+'; position: absolute; right: 4px; top: 14px; font-size: 30px; font-weight: 400; color: var(--gold); transition: transform .2s ease; }
+details.faq[open] summary::after { transform: rotate(45deg); }
+details.faq p { padding: 0 0 20px; }
+
+/* About: timeline and beliefs */
+.timeline { list-style: none; padding: 0; margin: 28px 0 0; position: relative; }
+.timeline::before { content: ''; position: absolute; left: 11px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(var(--gold), rgba(233,196,106,0.15)); }
+.timeline li { position: relative; padding: 0 0 26px 44px; }
+.timeline li::before { content: ''; position: absolute; left: 4px; top: 6px; width: 16px; height: 16px; border-radius: 50%; background: var(--bg); border: 3px solid var(--gold); }
+.timeline li.now::before { background: var(--gold); }
+.timeline .when { font-size: 15px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.timeline .what { font-weight: 700; font-size: 20px; }
+.belief { display: flex; flex-direction: column; gap: 10px; }
+.photo-real { width: 300px; max-width: 100%; aspect-ratio: 3 / 4; border-radius: 28px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 6px rgba(233,196,106,0.08); background: var(--panel); position: relative; }
+.photo-real img { width: 100%; height: 100%; object-fit: cover; }
+.photo-real .photo-fallback { position: absolute; inset: 0; margin: auto; width: 45%; height: auto; }
