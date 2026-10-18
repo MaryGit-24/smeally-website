@@ -50,20 +50,20 @@
 <input type="checkbox" name="botcheck" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
 
 <div class="field"><label for="f-name">Your name</label>
-<input class="input" id="f-name" name="name" autocomplete="name" required></div>
+<input class="input" id="f-name" name="name" autocomplete="name" placeholder="John Doe" required></div>
 
 <div class="field"><label for="f-biz">Business name</label>
-<input class="input" id="f-biz" name="business" autocomplete="organization" required></div>
+<input class="input" id="f-biz" name="business" autocomplete="organization" placeholder="Elixir Haven" required></div>
 
 <div class="field"><label for="f-kind">What kind of business is it?</label>
-<input class="input" id="f-kind" name="kind" placeholder="For example: perfume shop, catfish farm, salon, logistics"></div>
+<input class="input" id="f-kind" name="kind" placeholder="Perfume shop, salon, catfish farm"></div>
 
 <div class="field"><label for="f-where">Where are you based?</label>
-<input class="input" id="f-where" name="location" placeholder="City and country"></div>
+<input class="input" id="f-where" name="location" placeholder="Benin City, Edo State"></div>
 
 <div class="field"><label for="f-wa">WhatsApp number</label>
-<p class="hint" id="f-wa-hint">Include your country code, for example +234 or +254.</p>
-<input class="input" id="f-wa" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="+234" aria-describedby="f-wa-hint" required></div>
+<p class="hint" id="f-wa-hint">We'll continue the conversation on WhatsApp. Start with your country code: Nigeria +234, Kenya +254, Ghana +233.</p>
+<input class="input" id="f-wa" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="+234 801 234 5678" aria-describedby="f-wa-hint" required></div>
 
 <div class="field"><label for="f-pain">What's taking up most of your time right now?</label>
 <textarea class="input" id="f-pain" name="time_taker" rows="4" placeholder="Say it the way you'd say it to a friend."></textarea></div>
@@ -91,7 +91,7 @@
 <h1 class="h1" style="font-size:clamp(34px,5.5vw,50px)">Thank you. Now pick your time.</h1>
 <p style="margin-top:12px">We have your details. Choose a Saturday or Sunday slot below. You'll get a confirmation straight away.</p>
 <div id="cal-box"></div>
-<p class="muted" style="margin-top:18px">Calendar not loading? <a id="cal-wa" href="https://wa.me/2348155720669">Message us on WhatsApp</a> and we'll book you in.</p>
+<p class="muted" style="margin-top:18px">Calendar not loading? <a id="cal-wa" href="https://wa.me/2348155720669?text=Hello%20SME%20Ally%2C%20I%20found%20you%20on%20smeally.com." data-wa>Message us on WhatsApp</a> and we'll book you in.</p>
 </div>
 
 <div id="step-done" class="done" hidden>
@@ -108,7 +108,7 @@
 <span class="brand-name">SME <span>Ally</span></span>
 <div class="footer-links">
 <a href="mailto:ime@smeally.com">ime@smeally.com</a>
-<a href="https://wa.me/2348155720669">WhatsApp +234 815 572 0669</a>
+<a href="https://wa.me/2348155720669?text=Hello%20SME%20Ally%2C%20I%20found%20you%20on%20smeally.com." data-wa>WhatsApp +234 815 572 0669</a>
 <a href="/privacy.html">Privacy</a>
 <span>Lagos, Nigeria · Serving SMEs across Africa</span>
 </div>
@@ -116,6 +116,25 @@
 </footer>
 <script src="/js/config.js"></script>
 <script src="/js/start.js"></script>
+<dialog id="wa-dialog" class="wa-dialog" aria-labelledby="wa-title">
+<form id="wa-form" method="dialog" novalidate data-intro="Hello SME Ally, I found you on smeally.com.">
+<button type="button" class="wa-close" id="wa-close" aria-label="Close">&times;</button>
+<p class="eyebrow" style="margin-bottom:8px">Chat on WhatsApp</p>
+<h2 id="wa-title" class="wa-title">Quick hello first</h2>
+<p class="muted" style="margin-top:6px">So we know who you are when your message arrives.</p>
+<div class="field" style="margin-top:20px"><label for="wa-name">Your name</label>
+<input class="input" id="wa-name" name="name" autocomplete="name" placeholder="John Doe" required></div>
+<div class="field" style="margin-top:16px"><label for="wa-biz">Business name</label>
+<input class="input" id="wa-biz" name="business" autocomplete="organization" placeholder="Elixir Haven"></div>
+<div class="field" style="margin-top:16px"><label for="wa-kind">What kind of business is it?</label>
+<input class="input" id="wa-kind" name="kind" placeholder="Perfume shop, salon, catfish farm"></div>
+<div class="field" style="margin-top:16px"><label for="wa-need">What can we help with? <span class="muted" style="font-weight:400">(optional)</span></label>
+<textarea class="input" id="wa-need" name="need" rows="3" placeholder="Say it the way you'd say it to a friend."></textarea></div>
+<p class="error-text" id="wa-error" role="alert" hidden>Please add your name.</p>
+<button class="btn" type="submit" style="margin-top:20px;width:100%">Continue to WhatsApp</button>
+</form>
+</dialog>
+<script src="/js/wa.js" defer></script>
 <script src="/js/motion.js" defer></script>
 </body>
 </html>

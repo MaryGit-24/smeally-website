@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chat with SME Ally on WhatsApp</title>
+<meta name="description" content="Tell us a little about your business and continue the chat on WhatsApp.">
+<meta name="theme-color" content="#0B0B0C">
+<link rel="canonical" href="https://smeally.com/chat">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SME Ally">
+<meta property="og:title" content="Chat with SME Ally on WhatsApp">
+<meta property="og:description" content="Tell us a little about your business and continue the chat on WhatsApp.">
+<meta property="og:url" content="https://smeally.com/chat">
+<meta property="og:image" content="https://smeally.com/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="preload" href="/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="/" aria-label="SME Ally home">
+<img src="/images/mark.svg" width="40" height="40" alt="">
+<span class="brand-name">SME <span>Ally</span></span>
+</a>
+<nav class="nav" aria-label="Main">
+<a href="/">Home</a>
+<a href="/what-we-do.html">What we do</a>
+<a href="/about.html">About</a>
+<a class="btn" href="/start.html">Get started</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<div class="narrow" style="max-width:520px;padding-top:48px;padding-bottom:72px">
+<p class="eyebrow">Chat on WhatsApp</p>
+<h1 class="h1" style="font-size:clamp(34px,6vw,48px)">Let's talk about your business</h1>
+<p class="muted" style="margin-top:12px">Three quick answers, then WhatsApp opens with your message ready to send.</p>
+<form id="wa-form" novalidate data-intro="Hello SME Ally, I'd like to know more about how you can help my business.">
+<div class="field" style="margin-top:20px"><label for="wa-name">Your name</label>
+<input class="input" id="wa-name" name="name" autocomplete="name" placeholder="John Doe" required></div>
+<div class="field" style="margin-top:16px"><label for="wa-biz">Business name</label>
+<input class="input" id="wa-biz" name="business" autocomplete="organization" placeholder="Elixir Haven"></div>
+<div class="field" style="margin-top:16px"><label for="wa-kind">What kind of business is it?</label>
+<input class="input" id="wa-kind" name="kind" placeholder="Perfume shop, salon, catfish farm"></div>
+<div class="field" style="margin-top:16px"><label for="wa-need">What can we help with? <span class="muted" style="font-weight:400">(optional)</span></label>
+<textarea class="input" id="wa-need" name="need" rows="3" placeholder="Say it the way you'd say it to a friend."></textarea></div>
+<p class="error-text" id="wa-error" role="alert" hidden>Please add your name.</p>
+<button class="btn" type="submit" style="margin-top:20px;width:100%">Continue to WhatsApp</button>
+</form>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<span class="brand-name">SME <span>Ally</span></span>
+<div class="footer-links">
+<a href="mailto:ime@smeally.com">ime@smeally.com</a>
+<a href="https://wa.me/2348155720669">WhatsApp +234 815 572 0669</a>
+<a href="/privacy.html">Privacy</a>
+<span>Lagos, Nigeria · Serving SMEs across Africa</span>
+</div>
+</div>
+</footer>
+<script src="/js/config.js"></script>
+<script src="/js/wa.js" defer></script>
+<script src="/js/motion.js" defer></script>
+</body>
+</html>
