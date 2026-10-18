@@ -302,3 +302,11 @@ details.faq p { padding: 0 0 20px; }
 .photo-real { width: 300px; max-width: 100%; aspect-ratio: 3 / 4; border-radius: 28px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 6px rgba(233,196,106,0.08); background: var(--panel); position: relative; }
 .photo-real img { width: 100%; height: 100%; object-fit: cover; }
 .photo-real .photo-fallback { position: absolute; inset: 0; margin: auto; width: 45%; height: auto; }
+
+/* WhatsApp quick form */
+.wa-dialog { width: min(460px, calc(100vw - 32px)); max-height: calc(100vh - 32px); overflow: auto; padding: 28px 24px 24px; border-radius: 24px; border: 1px solid var(--line); background: var(--panel); color: var(--text); }
+.wa-dialog::backdrop { background: rgba(0, 0, 0, 0.7); }
+.wa-dialog[open] { animation: pop-in .25s ease both; }
+.wa-title { font-size: 30px; }
+.wa-close { position: absolute; top: 12px; right: 14px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: transparent; color: var(--muted); font-size: 30px; line-height: 1; cursor: pointer; }
+.wa-close:hover { color: var(--gold); }
